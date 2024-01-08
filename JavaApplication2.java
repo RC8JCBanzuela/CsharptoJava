@@ -53,6 +53,12 @@ public class JavaApplication2 {
         if(dec == 1){
             System.out.println("Item Info: " + "\n " + "Item Name: " + sellItem + "\n" + "Owner: " + sellName + "\n" +"Price: " + sellPrice);
             
+            Scanner buyName = new Scanner (System.in);
+            String buyerName;
+            
+            System.out.print("Name: ");
+            buyerName = buyName.nextLine();
+            
             Scanner myPrice = new Scanner(System.in);
             int setPrice;
             
@@ -60,11 +66,13 @@ public class JavaApplication2 {
             setPrice = myPrice.nextInt();
             
             if(setPrice > sellPrice){
-                System.out.println("The current highest bid is: " + setPrice);
-                System.out.print("Is there any interested to bid higher? 1/2? : ");
+                System.out.println("Congratulations!");
             }
             else if(setPrice < sellPrice){
                 System.out.println("Enter a valid price!");
+            }
+            else{
+                System.out.println("Null");
             }
         }
         else{
